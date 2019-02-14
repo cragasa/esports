@@ -53,6 +53,7 @@ group :development do
   # Adding Faker gem
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'kaminari'
+  gem 'bootstrap-kaminari-views'
 end
 
 group :test do
