@@ -1,6 +1,8 @@
 <h2>All Teams</h2>
+<%= paginate @teams %>
 <ul class="list-group">
   <% @teams.each do |team| %>
     <li class="list-group-item"><%= link_to team.name, team %></li>
   <% end %>
 </ul>
+<%= paginate @teams %>

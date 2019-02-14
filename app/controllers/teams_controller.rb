@@ -2,11 +2,10 @@
 
 class TeamsController < ApplicationController
   def index
-    @teams = Team.order(:name)
+    @teams = Team.order(:name).page(params[:page]).per(10)
   end
 
   def show
     @team = Team.includes(:players, :coaches).find(params[:id])
-    # @team = Team.find(21)
   end
 end

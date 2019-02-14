@@ -52,6 +52,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Adding Faker gem
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem 'kaminari'
 end
 
 group :test do

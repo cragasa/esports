@@ -2,7 +2,7 @@
 
 class PlayersController < ApplicationController
   def index
-    @players = Player.includes(:team).order(:name)
+    @players = Player.includes(:team).order(:name).page(params[:page])
   end
 
   def show
