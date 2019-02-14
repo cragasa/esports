@@ -6,14 +6,14 @@
 <h3>All Players</h3>
 <ul>
   <% @team.players.each do |player| %>
-    <li><%= player.name %> also known as <%= player.game_name %> from <%= player.country %></li>
+    <li><%= link_to player.name, player %> also known as <%= player.game_name %> from <%= player.country %></li>
   <% end %>
 </ul>
 
 <h3>All Coaches</h3>
 <ul>
   <% @team.coaches.each do |coach| %>
-    <li><%= coach.name %></li>
+    <li><%= link_to coach.name, coach %></li>
   <% end %>
 </ul>
 

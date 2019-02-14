@@ -2,10 +2,10 @@
 
 class PlayersController < ApplicationController
   def index
-    @players = Player.order(:name)
+    @players = Player.includes(:team).order(:name)
   end
 
   def show
-    @player = Player.find(params[:id])
+    @player = Player.includes(:team).find(params[:id])
   end
 end
