@@ -4,16 +4,16 @@
 <p>Total Coaches: <%= @team.coaches.size %></p>
 
 <h3>All Players</h3>
-<ul>
+<ul class="list-group">
   <% @team.players.each do |player| %>
-    <li><%= link_to player.name, player %> also known as <%= player.game_name %> from <%= player.country %></li>
+    <li class="list-group-item"><%= link_to player.name, player %> also known as <%= player.game_name %> from <%= player.country %></li>
   <% end %>
 </ul>
 
 <h3>All Coaches</h3>
-<ul>
+<ul class="list-group">
   <% @team.coaches.each do |coach| %>
-    <li><%= link_to coach.name, coach %></li>
+    <li class="list-group-item"><%= link_to coach.name, coach %></li>
   <% end %>
 </ul>
 

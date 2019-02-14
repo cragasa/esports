@@ -10,24 +10,27 @@
   </head>
 
   <body>
-    <header>
-      <h1>Esports Teams!</h1>
-      <nav>
-        <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Players", players_path %></li>
-          <li><%= link_to "Coaches", coaches_path %></li>
-          <li><%= link_to "About", static_path(permalink: 'about-us') %></li>
-        </ul>
-        <%= form_tag(search_results_path, method: "get") do %>
-          <%= label_tag(:q, "Search for:") %>
-          <%= text_field_tag(:q) %>
-          <%= submit_tag("Search") %>
-        <% end %>
-      </nav>
-    </header>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <h1>Esports Teams</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-link"><%= link_to "Home", root_path %></li>
+            <li class="nav-link"><%= link_to "Players", players_path %></li>
+            <li class="nav-link"><%= link_to "Coaches", coaches_path %></li>
+            <li class="nav-link"><%= link_to "About", static_path(permalink: 'about-us') %></li>
+          </ul>
+          <%= form_tag(search_results_path, method: "get") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
+        </nav>
+      </header>
+      <%= yield %>
 
-    <footer>Note: Data is not accurate! These players are Kpop idols not gamers! Rise up!</footer>
+      <footer>Note: Data is not accurate! These players are Kpop idols not gamers! Rise up!</footer>
+    </div>
   </body>
+
 </html>

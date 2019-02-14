@@ -1,22 +1,22 @@
 <h2>Your query for "<%= @query %>" resulted in...</h2>
 
 <h2><%= pluralize(@teams.size, 'Team')%></h2>
-<ul>
+<ul class="list-group">
   <% @teams.each do |team| %>
-    <li><%= link_to team.name, team %></li>
+    <li class="list-group-item"><%= link_to team.name, team %></li>
   <% end %>
 </ul>
 
 <h2><%= pluralize(@players.size, 'Player')%></h2>
-<ul>
+<ul class="list-group">
   <% @players.each do |player| %>
-    <li><%= link_to player.name, player %> is a member of <%= link_to player.team.name, player.team %></li>
+    <li class="list-group-item"><%= link_to player.name, player %> is a member of <%= link_to player.team.name, player.team %></li>
   <% end %>
 </ul>
 
 <h2><%= pluralize(@coaches.size, 'Coach')%></h2>
-<ul>
+<ul class="list-group">
   <% @coaches.each do |coach| %>
-    <li><%= link_to coach.name, coach %> is a Coach of <%= link_to coach.team.name, coach.team %></li>
+    <li class="list-group-item"><%= link_to coach.name, coach %> is a Coach of <%= link_to coach.team.name, coach.team %></li>
   <% end %>
 </ul>
