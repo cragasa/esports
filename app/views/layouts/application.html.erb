@@ -18,11 +18,12 @@
           <li><%= link_to "Players", players_path %></li>
           <li><%= link_to "Coaches", coaches_path %></li>
           <li><%= link_to "About", static_path(permalink: 'about-us') %></li>
-          <form action="">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Submit</button>
-          </form>
         </ul>
+        <%= form_tag(search_results_path, method: "get") do %>
+          <%= label_tag(:q, "Search for:") %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+        <% end %>
       </nav>
     </header>
     <%= yield %>

@@ -1,2 +1,22 @@
-<h1>Search#results</h1>
-<p>Find me in app/views/search/results.html.erb</p>
+<h2>Your query for "<%= @query %>" resulted in...</h2>
+
+<h2><%= pluralize(@teams.size, 'Team')%></h2>
+<ul>
+  <% @teams.each do |team| %>
+    <li><%= link_to team.name, team %></li>
+  <% end %>
+</ul>
+
+<h2><%= pluralize(@players.size, 'Player')%></h2>
+<ul>
+  <% @players.each do |player| %>
+    <li><%= link_to player.name, player %> is a member of <%= link_to player.team.name, player.team %></li>
+  <% end %>
+</ul>
+
+<h2><%= pluralize(@coaches.size, 'Coach')%></h2>
+<ul>
+  <% @coaches.each do |coach| %>
+    <li><%= link_to coach.name, coach %> is a Coach of <%= link_to coach.team.name, coach.team %></li>
+  <% end %>
+</ul>
