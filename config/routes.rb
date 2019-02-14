@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'teams/index'
-  get 'teams/show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :teams, only: %i[index show]
+
+  root to: 'teams#index'
 end

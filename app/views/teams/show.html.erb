@@ -1,2 +1,20 @@
-<h1>Teams#show</h1>
-<p>Find me in app/views/teams/show.html.erb</p>
+<h2><%= @team.name %></h2>
+
+<p>Total Players: <%= @team.players.size %></p>
+<p>Total Coaches: <%= @team.coaches.size %></p>
+
+<h3>All Players</h3>
+<ul>
+  <% @team.players.each do |player| %>
+    <li><%= player.name %> also known as <%= player.game_name %> from <%= player.country %></li>
+  <% end %>
+</ul>
+
+<h3>All Coaches</h3>
+<ul>
+  <% @team.coaches.each do |coach| %>
+    <li><%= coach.name %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Home', root_path %></p>
