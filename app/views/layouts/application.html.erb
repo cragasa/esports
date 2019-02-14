@@ -10,8 +10,16 @@
   </head>
 
   <body>
-    <h1>Esports Teams!</h1>
-
+    <header>
+      <h1>Esports Teams!</h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Players", players_path %></li>
+          <li><%= link_to "Coaches", coaches_path %></li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
 
     <footer>Note: Data is not accurate! These players are Kpop stars not gamers! Rise up!</footer>
