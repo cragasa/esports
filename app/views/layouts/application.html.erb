@@ -17,11 +17,12 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Players", players_path %></li>
           <li><%= link_to "Coaches", coaches_path %></li>
+          <li><%= link_to "About", static_path(permalink: 'about-us') %></li>
         </ul>
       </nav>
     </header>
     <%= yield %>
 
-    <footer>Note: Data is not accurate! These players are Kpop stars not gamers! Rise up!</footer>
+    <footer>Note: Data is not accurate! These players are Kpop idols not gamers! Rise up!</footer>
   </body>
 </html>
